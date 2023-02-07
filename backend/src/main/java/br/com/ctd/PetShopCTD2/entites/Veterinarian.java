@@ -1,7 +1,38 @@
 package br.com.ctd.PetShopCTD2.entites;
 
-public class Veterinarian extends User{
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
+@Entity
+public class Veterinarian extends Person {
+    @Column(unique = true)
     private String license;
 
-    //private List<Appointment> appointments = new ArrayList<>();
+    @OneToMany(mappedBy = "veterinarian")
+    private List<Appointment> appointments = new ArrayList<>();
+
+    public Veterinarian() {
+    }
+
+    public Veterinarian(Long id, String name, String email, String password, LocalDate dateRegister, String license) {
+        super(id, name, email, password, dateRegister);
+        this.license = license;
+    }
+
+    public String getLicense() {
+        return license;
+    }
+
+    public void setLicense(String license) {
+        this.license = license;
+    }
+
+    public List<Appointment> getAppointments() {
+        return appointments;
+    }
 }
