@@ -24,7 +24,6 @@ INSERT INTO Vaccine (name,minimal_age) VALUES ('India Disease',1.01);
 INSERT INTO Vaccine (name,minimal_age) VALUES ('Viral Hilary',3.01);
 INSERT INTO Vaccine (name,minimal_age) VALUES ('Allistair Disease',3.01);
 
-
 INSERT INTO Owner (id,name,email,password,date_register,cpf) VALUES (1,'Hanae','sed.sapien@outlook.couk','$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG','2023-03-20','621.367.555-88');
 INSERT INTO Owner (id,name,email,password,date_register,cpf) VALUES (2,'Heidi','nam.interdum@icloud.net','$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG','2022-08-19','682.231.812-23');
 INSERT INTO Owner (id,name,email,password,date_register,cpf) VALUES (3,'Emerald','nascetur.ridiculus@aol.net','$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG','2023-10-15','404.498.727-50');
@@ -50,7 +49,6 @@ INSERT INTO Owner (id,name,email,password,date_register,cpf) VALUES (22,'Shelly'
 INSERT INTO Owner (id,name,email,password,date_register,cpf) VALUES (23,'Mason','elementum.purus.accumsan@hotmail.net','$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG','2023-06-29','675.377.402-19');
 INSERT INTO Owner (id,name,email,password,date_register,cpf) VALUES (24,'Regan','ac@icloud.net','$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG','2023-01-29','936.275.152-82');
 INSERT INTO Owner (id,name,email,password,date_register,cpf) VALUES (25,'Zena','sit.amet@google.ca','$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG','2022-05-07','741.868.648-86');
-
 
 INSERT INTO veterinarian (id,name,email,password,date_register,license) VALUES (1,'Ira','blandit@hotmail.org','$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG','2022-11-09','556-405.22');
 INSERT INTO veterinarian (id,name,email,password,date_register,license) VALUES (2,'Ivy','quam.dignissim.pharetra@protonmail.org','$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG','2023-04-22','596-774.21');
@@ -78,8 +76,6 @@ INSERT INTO veterinarian (id,name,email,password,date_register,license) VALUES (
 INSERT INTO veterinarian (id,name,email,password,date_register,license) VALUES (24,'Jasper','elit.erat@google.couk','$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG','2023-03-30','826-523.13');
 INSERT INTO veterinarian (id,name,email,password,date_register,license) VALUES (25,'Sheila','vitae.orci.phasellus@hotmail.edu','$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG','2022-02-21','677-407.85');
 
-
-
 INSERT INTO animal (id,name,species,birthdate,date_register,owner_id) VALUES (1,'Priscilla',2,'2023-04-08','2023-10-04',4);
 INSERT INTO animal (id,name,species,birthdate,date_register,owner_id) VALUES (2,'Alfonso',2,'2022-03-19','2022-07-09',18);
 INSERT INTO animal (id,name,species,birthdate,date_register,owner_id) VALUES (3,'Serena',3,'2022-07-18','2023-08-08',2);
@@ -105,3 +101,55 @@ INSERT INTO animal (id,name,species,birthdate,date_register,owner_id) VALUES (22
 INSERT INTO animal (id,name,species,birthdate,date_register,owner_id) VALUES (23,'Winifred',1,'2023-10-17','2022-06-25',6);
 INSERT INTO animal (id,name,species,birthdate,date_register,owner_id) VALUES (24,'Xantha',2,'2022-02-12','2023-02-18',15);
 INSERT INTO animal (id,name,species,birthdate,date_register,owner_id) VALUES (25,'Yoshio',1,'2023-10-02','2023-05-01',3);
+
+INSERT INTO card_vaccine (id,date,animal_id,vaccine_id) VALUES (1,'2022-10-10',12,9);
+INSERT INTO card_vaccine (id,date,animal_id,vaccine_id) VALUES (2,'2023-07-29',7,9);
+INSERT INTO card_vaccine (id,date,animal_id,vaccine_id) VALUES (3,'2023-05-15',8,16);
+INSERT INTO card_vaccine (id,date,animal_id,vaccine_id) VALUES (4,'2023-07-12',14,5);
+INSERT INTO card_vaccine (id,date,animal_id,vaccine_id) VALUES (5,'2022-09-08',19,14);
+INSERT INTO card_vaccine (id,date,animal_id,vaccine_id) VALUES (6,'2023-06-29',5,7);
+INSERT INTO card_vaccine (id,date,animal_id,vaccine_id) VALUES (7,'2022-02-13',18,19);
+INSERT INTO card_vaccine (id,date,animal_id,vaccine_id) VALUES (8,'2023-03-26',10,17);
+INSERT INTO card_vaccine (id,date,animal_id,vaccine_id) VALUES (9,'2022-09-29',23,13);
+INSERT INTO card_vaccine (id,date,animal_id,vaccine_id) VALUES (10,'2022-08-19',14,7);
+INSERT INTO card_vaccine (id,date,animal_id,vaccine_id) VALUES (11,'2022-04-03',3,4);
+INSERT INTO card_vaccine (id,date,animal_id,vaccine_id) VALUES (12,'2022-12-16',23,6);
+INSERT INTO card_vaccine (id,date,animal_id,vaccine_id) VALUES (13,'2024-01-29',12,22);
+INSERT INTO card_vaccine (id,date,animal_id,vaccine_id) VALUES (14,'2023-07-12',22,8);
+INSERT INTO card_vaccine (id,date,animal_id,vaccine_id) VALUES (15,'2022-10-02',22,2);
+INSERT INTO card_vaccine (id,date,animal_id,vaccine_id) VALUES (16,'2022-08-10',22,4);
+INSERT INTO card_vaccine (id,date,animal_id,vaccine_id) VALUES (17,'2022-06-17',24,7);
+INSERT INTO card_vaccine (id,date,animal_id,vaccine_id) VALUES (18,'2023-03-11',21,13);
+INSERT INTO card_vaccine (id,date,animal_id,vaccine_id) VALUES (19,'2023-01-09',14,21);
+INSERT INTO card_vaccine (id,date,animal_id,vaccine_id) VALUES (20,'2022-09-11',15,7);
+INSERT INTO card_vaccine (id,date,animal_id,vaccine_id) VALUES (21,'2022-02-15',6,15);
+INSERT INTO card_vaccine (id,date,animal_id,vaccine_id) VALUES (22,'2022-04-27',19,12);
+INSERT INTO card_vaccine (id,date,animal_id,vaccine_id) VALUES (23,'2023-03-02',3,13);
+INSERT INTO card_vaccine (id,date,animal_id,vaccine_id) VALUES (24,'2023-04-28',20,4);
+INSERT INTO card_vaccine (id,date,animal_id,vaccine_id) VALUES (25,'2023-08-07',15,18);
+
+INSERT INTO appointment (id,date_registered,animal_id,veterinarian_id,date_consultation,estimated_price,final_price) VALUES (1,'2023-04-27',22,3,'2024-02-04','73.98','43.74');
+INSERT INTO appointment (id,date_registered,animal_id,veterinarian_id,date_consultation,estimated_price,final_price) VALUES (2,'2022-04-18',2,18,'2023-08-19','4.07','17.13');
+INSERT INTO appointment (id,date_registered,animal_id,veterinarian_id,date_consultation,estimated_price,final_price) VALUES (3,'2023-12-20',6,14,'2022-04-05','44.10','80.18');
+INSERT INTO appointment (id,date_registered,animal_id,veterinarian_id,date_consultation,estimated_price,final_price) VALUES (4,'2023-07-16',13,10,'2022-09-19','44.11','34.91');
+INSERT INTO appointment (id,date_registered,animal_id,veterinarian_id,date_consultation,estimated_price,final_price) VALUES (5,'2022-08-05',10,22,'2022-09-03','83.09','51.79');
+INSERT INTO appointment (id,date_registered,animal_id,veterinarian_id,date_consultation,estimated_price,final_price) VALUES (6,'2022-04-10',11,5,'2023-12-06','72.07','37.65');
+INSERT INTO appointment (id,date_registered,animal_id,veterinarian_id,date_consultation,estimated_price,final_price) VALUES (7,'2023-12-21',22,10,'2023-05-21','96.80','42.43');
+INSERT INTO appointment (id,date_registered,animal_id,veterinarian_id,date_consultation,estimated_price,final_price) VALUES (8,'2022-02-23',21,3,'2023-11-19','86.01','87.02');
+INSERT INTO appointment (id,date_registered,animal_id,veterinarian_id,date_consultation,estimated_price,final_price) VALUES (9,'2023-10-13',8,17,'2022-03-07','59.39','59.64');
+INSERT INTO appointment (id,date_registered,animal_id,veterinarian_id,date_consultation,estimated_price,final_price) VALUES (10,'2023-01-01',22,9,'2022-12-21','28.61','59.76');
+INSERT INTO appointment (id,date_registered,animal_id,veterinarian_id,date_consultation,estimated_price,final_price) VALUES (11,'2022-12-31',19,19,'2023-03-30','79.07','74.25');
+INSERT INTO appointment (id,date_registered,animal_id,veterinarian_id,date_consultation,estimated_price,final_price) VALUES (12,'2023-09-25',22,22,'2023-06-07','16.47','86.77');
+INSERT INTO appointment (id,date_registered,animal_id,veterinarian_id,date_consultation,estimated_price,final_price) VALUES (13,'2024-01-23',11,13,'2023-06-26','4.22','42.15');
+INSERT INTO appointment (id,date_registered,animal_id,veterinarian_id,date_consultation,estimated_price,final_price) VALUES (14,'2022-05-23',6,12,'2023-12-29','51.26','90.74');
+INSERT INTO appointment (id,date_registered,animal_id,veterinarian_id,date_cancellation,estimated_price,final_price) VALUES (15,'2022-05-16',21,24,'2023-05-25','90.44','30.94');
+INSERT INTO appointment (id,date_registered,animal_id,veterinarian_id,date_consultation,estimated_price,final_price) VALUES (16,'2023-03-18',10,1,'2023-03-01','39.17','60.10');
+INSERT INTO appointment (id,date_registered,animal_id,veterinarian_id,date_consultation,estimated_price,final_price) VALUES (17,'2023-04-04',6,18,'2023-09-20','33.90','12.09');
+INSERT INTO appointment (id,date_registered,animal_id,veterinarian_id,date_consultation,estimated_price,final_price) VALUES (18,'2023-12-10',14,7,'2022-11-02','78.71','65.49');
+INSERT INTO appointment (id,date_registered,animal_id,veterinarian_id,date_consultation,estimated_price,final_price) VALUES (19,'2023-04-04',23,17,'2023-07-07','81.17','66.18');
+INSERT INTO appointment (id,date_registered,animal_id,veterinarian_id,date_consultation,estimated_price,final_price) VALUES (20,'2022-02-19',16,12,'2022-12-20','85.22','18.79');
+INSERT INTO appointment (id,date_registered,animal_id,veterinarian_id,date_consultation,estimated_price,final_price) VALUES (21,'2022-10-10',16,22,'2023-02-02','99.33','79.19');
+INSERT INTO appointment (id,date_registered,animal_id,veterinarian_id,date_consultation,estimated_price,final_price) VALUES (22,'2022-12-11',16,20,'2023-12-11','61.20','13.88');
+INSERT INTO appointment (id,date_registered,animal_id,veterinarian_id,date_consultation,estimated_price,final_price) VALUES (23,'2023-11-21',24,7,'2023-09-29','99.71','53.03');
+INSERT INTO appointment (id,date_registered,animal_id,veterinarian_id,date_consultation,estimated_price,final_price) VALUES (24,'2022-08-14',20,5,'2022-10-22','44.15','64.13');
+INSERT INTO appointment (id,date_registered,animal_id,veterinarian_id,date_consultation,estimated_price,final_price) VALUES (25,'2022-10-24',4,8,'2022-08-04','78.30','71.46');
