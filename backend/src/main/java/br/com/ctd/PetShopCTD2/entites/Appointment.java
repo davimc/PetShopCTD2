@@ -3,7 +3,6 @@ package br.com.ctd.PetShopCTD2.entites;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
@@ -14,7 +13,7 @@ public class Appointment implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private LocalDateTime dateRegistration;
+    private LocalDateTime dateRegistered;
     private LocalDateTime dateCancellation;
     private LocalDateTime dateConsultation;
     private Double estimatedPrice;
@@ -30,9 +29,9 @@ public class Appointment implements Serializable {
     public Appointment() {
     }
 
-    public Appointment(Long id, LocalDateTime dateRegistration, LocalDateTime dateCancellation, LocalDateTime dateConsultation, Double estimatedPrice, Double finalPrice, Animal animal, Veterinarian veterinarian) {
+    public Appointment(Long id, LocalDateTime dateRegistered, LocalDateTime dateCancellation, LocalDateTime dateConsultation, Double estimatedPrice, Double finalPrice, Animal animal, Veterinarian veterinarian) {
         this.id = id;
-        this.dateRegistration = dateRegistration;
+        this.dateRegistered = dateRegistered;
         this.dateCancellation = dateCancellation;
         this.dateConsultation = dateConsultation;
         this.estimatedPrice = estimatedPrice;
@@ -49,12 +48,12 @@ public class Appointment implements Serializable {
         this.id = id;
     }
 
-    public LocalDateTime getDateRegistration() {
-        return dateRegistration;
+    public LocalDateTime getDateRegistered() {
+        return dateRegistered;
     }
 
-    public void setDateRegistration(LocalDateTime dateRegistration) {
-        this.dateRegistration = dateRegistration;
+    public void setDateRegistered(LocalDateTime dateRegistered) {
+        this.dateRegistered = dateRegistered;
     }
 
     public LocalDateTime getDateCancellation() {
