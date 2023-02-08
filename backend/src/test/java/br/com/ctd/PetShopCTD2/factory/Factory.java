@@ -24,5 +24,8 @@ public class Factory {
         CardVaccine card = new CardVaccine(1L, LocalDate.now(), new Animal(), new Vaccine());
         return card;
     }
-
+    public static Owner createOwner() {
+        Owner owner = new Owner(1L, "Davi", "davimatosc@hotmail.com", "123456",LocalDate.now(), "60727289365");
+        return owner;
+    }
 }
