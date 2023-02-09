@@ -7,13 +7,15 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 @Entity
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name="person_type",
+        discriminatorType = DiscriminatorType.INTEGER)
 //TODO
 public abstract class Person implements Serializable /*UserDetails*/ {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String email;
