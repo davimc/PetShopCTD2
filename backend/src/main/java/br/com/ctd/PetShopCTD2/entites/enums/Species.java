@@ -27,7 +27,7 @@ public enum Species {
     public void setDescription(String description) {
         this.description = description;
     }
-    public Species toEnum(Integer cod) {
+    public static Species toEnum(Integer cod) {
         if(cod == null) return null;
         for(Species s: Species.values())
             if(cod.equals(s.getCod()))
