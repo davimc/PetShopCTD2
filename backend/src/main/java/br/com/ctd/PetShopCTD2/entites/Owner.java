@@ -1,20 +1,21 @@
 package br.com.ctd.PetShopCTD2.entites;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.OneToMany;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@DiscriminatorValue("2")
 public class Owner extends Person {
 
     @Column(unique = true)
     private String cpf;
 
-    @OneToMany(mappedBy = "owner")
+    @JsonIgnore
+    @OneToMany(mappedBy = "owner", fetch = FetchType.EAGER)
     private List<Animal> animals = new ArrayList<>();
 
     public Owner() {

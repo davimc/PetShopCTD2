@@ -1,6 +1,7 @@
 package br.com.ctd.PetShopCTD2.entites;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 
@@ -9,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@DiscriminatorValue("1")
 public class Veterinarian extends Person {
     @Column(unique = true)
     private String license;
