@@ -1,6 +1,7 @@
 package br.com.ctd.PetShopCTD2.entites;
 
 import br.com.ctd.PetShopCTD2.entites.enums.Species;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
@@ -25,9 +26,11 @@ public class Animal implements Serializable {
     @JoinColumn(name = "owner_id")
     private Owner owner;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "animal")
     private List<Appointment> appointments = new ArrayList<>();
 
+    @JsonIgnore
     @OneToMany(mappedBy = "animal")
     private List<CardVaccine> cards = new ArrayList<>();
 

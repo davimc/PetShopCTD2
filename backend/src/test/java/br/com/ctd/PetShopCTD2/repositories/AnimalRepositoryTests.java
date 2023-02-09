@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.dao.EmptyResultDataAccessException;
 
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 @DataJpaTest
@@ -42,6 +43,29 @@ public class AnimalRepositoryTests {
         Assertions.assertEquals(countTotalAnimals + 1L, animal.getId());
         Assertions.assertTrue(result.isPresent());
         Assertions.assertSame(result.get(), animal);
+    }
+
+    @Test
+    public void updateShouldUpdatingObjectWhenIdExists() {
+        String newName = "Otto Human";
+        String oldName = "";
+        Long id = null;
+        Optional<Animal> result = repository.findById(existingId);
+        Animal obj = result.get();
+        oldName = obj.getName();
+        obj.setName(newName);
+        obj = repository.save(result.get());
+
+        Assertions.assertNotEquals(oldName, obj.getName());
+        Assertions.assertEquals(newName, obj.getName());
+    }
+
+    @Test
+    public void updateShouldThrowNoSuchElementExceptionWhenIdDoesNotExist() {
+        Optional<Animal> result = repository.findById(nonExistingId);
+
+        Assertions.assertTrue(result.isEmpty());
+        Assertions.assertThrows(NoSuchElementException.class,() -> {result.get();});
     }
 
     @Test
