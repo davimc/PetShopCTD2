@@ -2,12 +2,14 @@ package br.com.ctd.PetShopCTD2.services;
 
 import br.com.ctd.PetShopCTD2.dtos.animal.AnimalDTO;
 import br.com.ctd.PetShopCTD2.dtos.animal.AnimalNewDTO;
+import br.com.ctd.PetShopCTD2.dtos.animal.AnimalUpdateDTO;
 import br.com.ctd.PetShopCTD2.entites.Animal;
 import br.com.ctd.PetShopCTD2.repositories.AnimalRepository;
 import br.com.ctd.PetShopCTD2.services.exceptions.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -45,14 +47,29 @@ public class AnimalService {
 
         return new AnimalDTO(obj);
     }
+    public AnimalDTO update(Long id, AnimalUpdateDTO dto) {
+        Animal obj = find(id);
+        fromDTO(obj,dto);
+
+        obj = repository.save(obj);
+
+        return new AnimalDTO(obj);
+    }
 
     private Animal fromDTO(AnimalNewDTO dto) {
         Animal obj = new Animal();
 
         obj.setName(dto.getName());
         obj.setBirthdate(dto.getBirthdate());
-        obj.setSpecies(dto.getSpecie());
+        obj.setSpecies(dto.getSpecie());;
 
         return obj;
     }
+    private void fromDTO(Animal obj, AnimalUpdateDTO dto) {
+        obj.setName(dto.getName() == null?obj.getName():dto.getName());
+        obj.setBirthdate(dto.getBirthdate() == null ? obj.getBirthdate(): dto.getBirthdate());
+        obj.setSpecies(dto.getSpecie() == null? obj.getSpecies(): dto.getSpecie());
+        obj.setDateRegister(dto.getDateRegister() == null? obj.getDateRegister():dto.getDateRegister());
+    }
+
 }
