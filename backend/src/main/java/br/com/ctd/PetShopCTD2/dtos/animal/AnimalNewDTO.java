@@ -12,7 +12,7 @@ public class AnimalNewDTO {
     @NotNull(message = "Nome Não pode ser nulo")
     @Size(min=2, message = "Nome precisa ter ao menos 2 letras")
     private String name;
-    @Positive
+    @Positive(message = "Espécie inválida")
     private int specie;
     @Past(message = "Aniversário não pode ser presente ou futuro")
     private LocalDate birthdate;
