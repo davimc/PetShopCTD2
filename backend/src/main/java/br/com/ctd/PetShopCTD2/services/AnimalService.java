@@ -3,8 +3,10 @@ package br.com.ctd.PetShopCTD2.services;
 import br.com.ctd.PetShopCTD2.dtos.animal.AnimalDTO;
 import br.com.ctd.PetShopCTD2.dtos.animal.AnimalNewDTO;
 import br.com.ctd.PetShopCTD2.dtos.animal.AnimalUpdateDTO;
+import br.com.ctd.PetShopCTD2.dtos.user.UserDTO;
 import br.com.ctd.PetShopCTD2.entites.Animal;
 import br.com.ctd.PetShopCTD2.repositories.AnimalRepository;
+import br.com.ctd.PetShopCTD2.services.exceptions.ForbbidenException;
 import br.com.ctd.PetShopCTD2.services.exceptions.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -22,6 +24,8 @@ public class AnimalService {
 
     @Autowired
     private OwnerService ownerService;
+    @Autowired
+    private AuthService authService;
 
     public Page<AnimalDTO> findAll(Pageable pageable) {
         Page<Animal> obj = repository.findAll(pageable);
@@ -50,6 +54,8 @@ public class AnimalService {
     public AnimalDTO update(Long id, AnimalUpdateDTO dto) {
         Animal obj = find(id);
         fromDTO(obj,dto);
+
+        authService.validateSelfOrAdmin(obj.getOwner().getId());
 
         obj = repository.save(obj);
 
