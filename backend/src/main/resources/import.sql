@@ -132,9 +132,6 @@ INSERT INTO tb_user_role (user_id, role_id) VALUES (50, 2);
 
 
 
-INSERT INTO animal (name,species,birthdate,date_register,owner_id) VALUES ('Priscilla',2,'2023-04-08','2023-10-04',4);
-INSERT INTO animal (name,species,birthdate,date_register,owner_id) VALUES ('Alfonso',2,'2022-03-19','2022-07-09',18);
-INSERT INTO animal (name,species,birthdate,date_register,owner_id) VALUES ('Serena',3,'2022-07-18','2023-08-08',2);
 INSERT INTO animal (name,species,birthdate,date_register,owner_id) VALUES ('Octavius',2,'2023-05-29','2023-07-05',2);
 INSERT INTO animal (name,species,birthdate,date_register,owner_id) VALUES ('Myra',2,'2022-11-16','2022-03-31',12);
 INSERT INTO animal (name,species,birthdate,date_register,owner_id) VALUES ('Pamela',2,'2023-11-10','2022-07-12',18);
@@ -142,6 +139,7 @@ INSERT INTO animal (name,species,birthdate,date_register,owner_id) VALUES ('Josi
 INSERT INTO animal (name,species,birthdate,date_register,owner_id) VALUES ('Simone',2,'2022-10-20','2022-08-10',25);
 INSERT INTO animal (name,species,birthdate,date_register,owner_id) VALUES ('Lawrence',3,'2023-02-03','2024-01-22',24);
 INSERT INTO animal (name,species,birthdate,date_register,owner_id) VALUES ('Adria',3,'2023-04-11','2024-01-10',10);
+INSERT INTO animal (name,species,birthdate,date_register,owner_id) VALUES ('Albion',3,'2022-07-18','2023-08-08',2);
 INSERT INTO animal (name,species,birthdate,date_register,owner_id) VALUES ('Destiny',2,'2022-08-10','2023-11-11',18);
 INSERT INTO animal (name,species,birthdate,date_register,owner_id) VALUES ('Ingrid',2,'2024-01-26','2023-07-19',21);
 INSERT INTO animal (name,species,birthdate,date_register,owner_id) VALUES ('Azalia',2,'2023-09-15','2022-11-20',14);
@@ -151,9 +149,11 @@ INSERT INTO animal (name,species,birthdate,date_register,owner_id) VALUES ('Flyn
 INSERT INTO animal (name,species,birthdate,date_register,owner_id) VALUES ('Hope',3,'2024-02-02','2023-02-03',22);
 INSERT INTO animal (name,species,birthdate,date_register,owner_id) VALUES ('Jared',2,'2023-03-26','2023-01-16',22);
 INSERT INTO animal (name,species,birthdate,date_register,owner_id) VALUES ('Geoffrey',3,'2022-04-25','2022-07-26',3);
+INSERT INTO animal (name,species,birthdate,date_register,owner_id) VALUES ('Alistar',2,'2022-03-19','2022-07-09',18);
 INSERT INTO animal (name,species,birthdate,date_register,owner_id) VALUES ('Sharon',2,'2023-01-29','2023-10-01',20);
 INSERT INTO animal (name,species,birthdate,date_register,owner_id) VALUES ('Orla',3,'2023-07-17','2022-02-10',20);
 INSERT INTO animal (name,species,birthdate,date_register,owner_id) VALUES ('Regina',2,'2022-07-30','2022-12-29',15);
+INSERT INTO animal (name,species,birthdate,date_register,owner_id) VALUES ('Aatrox',2,'2023-04-08','2023-10-04',4);
 INSERT INTO animal (name,species,birthdate,date_register,owner_id) VALUES ('Winifred',1,'2023-10-17','2022-06-25',6);
 INSERT INTO animal (name,species,birthdate,date_register,owner_id) VALUES ('Xantha',2,'2022-02-12','2023-02-18',15);
 INSERT INTO animal (name,species,birthdate,date_register,owner_id) VALUES ('Yoshio',1,'2023-10-02','2023-05-01',3);
