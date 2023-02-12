@@ -18,7 +18,6 @@ import java.util.stream.Collectors;
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name="user_type",
         discriminatorType = DiscriminatorType.INTEGER)
-//TODO
 public abstract class User implements Serializable, UserDetails {
     private static final long serialVersionUID = 1L;
 

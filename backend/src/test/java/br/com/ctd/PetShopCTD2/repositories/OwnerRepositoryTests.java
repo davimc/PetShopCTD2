@@ -26,8 +26,7 @@ public class OwnerRepositoryTests {
     void setUp() throws Exception {
         existingId = 1L;
         nonExistingId = 1000L;
-        //todo atualizar
-        countTotalOwners = 25L;
+        countTotalOwners = 50L;
     }
 
     @Test
@@ -43,6 +42,7 @@ public class OwnerRepositoryTests {
         Assertions.assertTrue(result.isPresent());
         Assertions.assertSame(result.get(), owner);
         Assertions.assertNotNull(owner.getId());
+
         Assertions.assertEquals(countTotalOwners + 1L, owner.getId());
     }
 

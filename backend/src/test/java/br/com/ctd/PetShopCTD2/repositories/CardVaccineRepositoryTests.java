@@ -25,7 +25,6 @@ public class CardVaccineRepositoryTests {
     void setUp() throws Exception {
         existingId = 1L;
         nonExistingId = 1000L;
-        //todo atualizar
         countTotalCardVaccines = 25L;
     }
 
