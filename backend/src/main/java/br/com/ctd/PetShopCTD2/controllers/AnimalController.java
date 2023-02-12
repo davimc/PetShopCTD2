@@ -6,7 +6,6 @@ import br.com.ctd.PetShopCTD2.dtos.animal.AnimalUpdateDTO;
 import br.com.ctd.PetShopCTD2.services.AnimalService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
@@ -42,6 +41,6 @@ public class AnimalController {
 
     @PutMapping("/{id}")
     public ResponseEntity<AnimalDTO> update(@RequestBody @Valid AnimalUpdateDTO dto, @PathVariable Long id) {
-            return ResponseEntity.accepted().body(service.update(id, dto));
+        return ResponseEntity.accepted().body(service.update(id, dto));
     }
 }
