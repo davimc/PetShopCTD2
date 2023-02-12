@@ -9,7 +9,7 @@ import java.util.List;
 
 @Entity
 @DiscriminatorValue("2")
-public class Owner extends Person {
+public class Owner extends User {
 
     @Column(unique = true)
     private String cpf;

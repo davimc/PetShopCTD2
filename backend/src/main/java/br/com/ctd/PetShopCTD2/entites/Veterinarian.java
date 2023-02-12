@@ -11,7 +11,7 @@ import java.util.List;
 
 @Entity
 @DiscriminatorValue("1")
-public class Veterinarian extends Person {
+public class Veterinarian extends User {
     @Column(unique = true)
     private String license;
 
